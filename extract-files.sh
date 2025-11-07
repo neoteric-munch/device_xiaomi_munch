@@ -73,10 +73,6 @@ function add_line_if_missing() {
 
 function blob_fixup() {
     case "${1}" in
-        system/framework/WfdCommon.jar)
-            [ "$2" = "" ] && return 0
-            apktool_patch "${2}" "${MY_DIR}/blob-patches/WfdCommon.patch"
-            ;;
         vendor/etc/init/init.batterysecret.rc)
             [ "$2" = "" ] && return 0
             sed -i '/seclabel u:r:batterysecret:s0$/d' "${2}"
@@ -129,10 +125,6 @@ function blob_fixup() {
         vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so)
             [ "$2" = "" ] && return 0
             binary_regex_replace "${2}" '\x9A\x0A\x00\x94' '\x1F\x20\x03\xD5'
-            ;;
-        system_ext/lib64/libwfdservice.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "android.media.audio.common.types-V4-cpp.so" "android.media.audio.common.types-V5-cpp.so" "${2}"
             ;;
         vendor/lib64/libril-qc-hal-qmi.so)
             [ "$2" = "" ] && return 0
