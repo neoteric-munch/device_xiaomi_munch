@@ -24,3 +24,6 @@ allow devicesettings_app sysfs_leds:file w_file_perms;
 
 # Allow XiaomiParts to write to sysfs_thermal
 allow devicesettings_app sysfs_thermal:file w_file_perms;
+
+# Allow XiaomiParts to read/write DC Dimming & HBM nodes
+allow devicesettings_app sysfs_dc_hbm:file rw_file_perms;
