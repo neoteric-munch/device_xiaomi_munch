@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.kona \
     audio.r_submix.default \
-    audio.usbv2.default \
+    audio.usbv2.default
 
 PRODUCT_PACKAGES += \
     liba2dpoffload \
