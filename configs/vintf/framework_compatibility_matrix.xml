@@ -1,0 +1,26 @@
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-FileCopyrightText: 2026 olzhas0986
+    SPDX-License-Identifier: Apache-2.0
+-->
+<compatibility-matrix version="1.0" type="framework">
+    <!-- Qualcomm Audio HAL extension -->
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.audiohalext</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAudioHalExt</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <!-- Qualcomm RIL still serves the 1.5 radio HAL -->
+    <hal format="hidl" optional="true">
+        <name>android.hardware.radio</name>
+        <version>1.5</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
