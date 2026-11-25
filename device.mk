@@ -126,6 +126,10 @@ PRODUCT_COPY_FILES += \
 
 $(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
+# tinycompress: the audio HAL needs the extended compress API and the looped read (kernel < 5.10)
+$(call soong_config_set,tinycompress,enable_extended_compress_format,true)
+$(call soong_config_set,tinycompress,loop_compress_read,true)
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
