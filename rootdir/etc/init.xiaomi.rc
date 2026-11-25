@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2026 olzhas0986
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -11,6 +12,9 @@ on init
 
     chmod 0666 /dev/goodix_fp
     chown system system /dev/goodix_fp
+
+    chown system system /sys/touchpanel/double_tap
+    chmod 0644 /sys/touchpanel/double_tap
 
     chown system system /sys/touchpanel/fod_status
     chmod 0644 /sys/touchpanel/fod_status
