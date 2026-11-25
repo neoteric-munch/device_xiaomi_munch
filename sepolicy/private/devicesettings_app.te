@@ -30,3 +30,6 @@ allow devicesettings_app sysfs_dc_hbm:file rw_file_perms;
 
 # Allow XiaomiParts to read/write to sysfs_htsr;
 allow devicesettings_app sysfs_htsr:file rw_file_perms;
+
+# Allow XiaomiParts to use touchfeature HAL
+hal_client_domain(devicesettings_app, hal_touchfeature_xiaomi)

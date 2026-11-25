@@ -1,0 +1,4 @@
+# HwBinder IPC from client to server
+binder_call(hal_touchfeature_xiaomi_client, hal_touchfeature_xiaomi_server)
+
+hal_attribute_hwservice(hal_touchfeature_xiaomi, hal_touchfeature_xiaomi_hwservice)

@@ -432,6 +432,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,qti_thermal,netlink,false)
 
+# Touchfeature
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.touchfeature@1.0.vendor
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti \
