@@ -9,6 +9,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Kernel version must be known before device/qcom/common/common.mk is parsed
+TARGET_KERNEL_VERSION := 4.19
+
 # Inherit some common Neoteric-OS stuff.
 $(call inherit-product, vendor/neoteric/target/product/neoteric-target.mk)
 

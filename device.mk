@@ -158,15 +158,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# Display
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.composer-service
-
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@3.0-impl-qti-display \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
-    vendor.qti.hardware.display.allocator-service
-
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
@@ -277,6 +268,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     av \
     bt \
     charging \
+    display \
     overlay \
     perf \
     telephony \
