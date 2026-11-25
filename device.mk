@@ -417,11 +417,14 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi \
+    vendor/qcom/opensource/thermal-hal \
     vendor/qcom/opensource/usb/etc
 
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
+
+$(call soong_config_set,qti_thermal,netlink,false)
 
 # USB
 PRODUCT_PACKAGES += \
