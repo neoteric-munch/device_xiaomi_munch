@@ -186,6 +186,9 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor
 
+# Memtrack
+TARGET_USE_AIDL_QTI_MEMTRACK := true
+
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
