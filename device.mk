@@ -236,9 +236,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
-# Init
-$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_munch)
-
 # Input
 PRODUCT_PACKAGES += \
     kona-mtp-snd-card_Button_Jack.kl \
