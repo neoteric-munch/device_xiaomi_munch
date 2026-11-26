@@ -1,2 +1,6 @@
 allow vendor_hal_perf_default hal_graphics_composer_default:dir search;
 allow vendor_hal_perf_default hal_graphics_composer_default:file { open read };
+
+# Allow perf HAL to read system_server and thermal data dirs
+allow vendor_hal_perf_default system_server:dir search;
+allow vendor_hal_perf_default vendor_thermal_data_file:dir search;
